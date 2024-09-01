@@ -1,0 +1,27 @@
+////index.scss
+@charset "UTF-8";
+
+//mixins & variables
+@import '_breakpoints.scss';
+@import '_animations.scss';
+@import '_colors.scss';
+@import '_fonts.scss';
+@import '_helpers.scss';
+
+//reset
+@import '_baseline.scss';
+
+//partials
+@import '_og-thumbs.scss';
+@import '_type.scss';
+@import '_forms.scss';
+@import '_navigation.scss';
+@import '_footer.scss';
+@import '_banners.scss';
+@import '_sections.scss';
+
+//page specific styles
+@import 'pages/_main.scss';
+@import 'pages/_art.scss';
+@import 'pages/_projects.scss';
+@import 'pages/_hire.scss';

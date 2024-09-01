@@ -1,0 +1,179 @@
+//form & input styling
+
+//container
+.form-container {
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+  padding: 0;
+  text-align: center;
+}
+
+//form styles
+form {
+  text-align: left;
+  font-size: 160%;
+  margin: auto;
+  align-self: center;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+input {
+  font-size: 1em;
+  padding: 1em 1em .25em 1em;
+  display: block;
+  width: 18em;
+  border: none;
+  border-bottom: 1px solid $charcoal;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+//label
+label {
+  color: $charcoal;
+  font-size: 1em;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: .5em;
+  top: 1em;
+  transition: 0.2s ease all;
+}
+
+//active
+input:focus ~ label, 
+input:valid ~ label {
+  top: -1em;
+  font-size: .75em;
+}
+
+input:focus ~ label {
+  color: $blue;
+}
+
+//bottom bar
+.bar {
+  position: relative;
+  display: block;
+  width: 18em;
+
+  &:before,
+  &:after {
+    content: '';
+    height: 3px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: $blue;
+    transition: 0.2s ease all;
+  }
+  
+  &:before {
+    left: 50%;
+  }
+  
+  &:after {
+    right: 50%;
+  }
+}
+
+//active
+input:focus ~ .bar:before, 
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+//highlight
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 16em;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+//active state
+input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+.group--select {
+  label {
+    position: static;
+    display: block;
+    margin-bottom: .5em;
+  }
+  
+  select {
+    vertical-align: text-bottom;
+    height: 35px;
+    // -webkit-appearance: none;
+    width: 100%;
+    padding: .5em 1.5em .5em .5em;
+    border-radius: 0 !important;
+    border: 2px solid $med-dark;
+    outline: 0;
+    background-color: $near-white;
+
+    &:focus {
+      border-color: $blue;
+      outline: 0;
+
+    }
+  }
+}
+
+//animation
+@keyframes inputHighlighter {
+  from {
+    background: $blue;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+//Button
+form {
+  button {
+    position: relative;
+    display: inline-block;
+    padding: .5em 1em;
+    margin: .3em 0 1em 0;
+    width: 100%;
+    max-width: 18rem;
+    vertical-align: middle;
+    color: white;
+    font-size: 1em;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    letter-spacing: .02em;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid $blue-hover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: $blue;
+    text-transform: uppercase;
+
+    &:focus { 
+      outline: 0;
+    }
+
+    &:hover,
+    &:focus { 
+      background: $blue-hover; 
+    }
+  }
+}

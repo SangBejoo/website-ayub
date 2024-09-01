@@ -1,0 +1,487 @@
+.blackFade {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+45,0.65+100 */
+  background: -moz-linear-gradient(top, transparent 0%, transparent 45%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, transparent 0%, transparent 45%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, transparent 0%, transparent 45%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+  /* IE6-9 */
+}
+
+.easeOutExpo,
+.menu nav ul a:after,
+.menu nav ul a:hover:after,
+.portButton,
+.portButton:hover,
+.contactLeft .links ul a li,
+.contactLeft .links ul a li:hover {
+  -webkit-transition: all 680ms cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: all 680ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 680ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 680ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.ease,
+.contactLeft .links ul a,
+.contactLeft .links ul a:hover {
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.blackScreen {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.68+0,0.85+100 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.85) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.85) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.85) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad000000', endColorstr='#d9000000', GradientType=0);
+  /* IE6-9 */
+}
+
+.easeInOutCirc {
+  -webkit-transition: all 800ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition: all 800ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: all 800ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 800ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.accentFade {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a4a4b3+0,dcc7c2+100 */
+  background: #a4a4b3;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #a4a4b3 0%, #dcc7c2 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #a4a4b3 0%, #dcc7c2 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #a4a4b3 0%, #dcc7c2 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4a4b3', endColorstr='#dcc7c2', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+
+/*----------------------------
+Insert a media query anywhere within your SCSS
+----------------------------*/
+
+.noSpace,
+html,
+body,
+.heroBossWrapp,
+.leftPane,
+.inners,
+.rightPane {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+html {
+  font-size: 1.063em;
+  box-sizing: border-box;
+  height: 100%;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+body {
+  background-color: white;
+  font-family: 'Source Sans Pro', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+  padding: 8px;
+}
+
+p {
+  margin-bottom: 1.3em;
+  font-family: 'Source Sans Pro', serif;
+}
+
+a {
+  color: #98b8f6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {
+  font-size: 2.827em;
+}
+
+h3 {
+  font-size: 1.999em;
+}
+
+h4 {
+  font-size: 1.414em;
+}
+
+small,
+.font_small {
+  font-size: 0.707em;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 40%;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  box-sizing: border-box;
+}
+
+button:focus {
+  outline: none;
+}
+
+.heroBossWrapp {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: #1c1b1b;
+  overflow: hidden;
+}
+
+.leftPane {
+  position: relative;
+  height: 100%;
+  background: #fafafa;
+  transform-origin: center center;
+}
+
+.leftPane .h1 {
+  overflow: hidden;
+}
+
+.leftPane .h2 {
+  overflow: hidden;
+}
+
+.leftPane h1 {
+  overflow: hidden;
+  transform: translatey(-100px);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.827em;
+  padding: 0 120px;
+  position: relative;
+  margin: 0em 0 0.5em;
+  display: inline-block;
+}
+
+.leftPane h1:after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  background: #333;
+}
+
+.leftPane h2 {
+  transform: translatey(-100px);
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 0 120px;
+}
+
+.leftPane span {
+  opacity: 0;
+  height: 8px;
+  width: 8px;
+  background: #333;
+  display: block;
+  margin: 4.4em 0px 0 120px;
+}
+
+.leftPane p {
+  opacity: 0;
+  margin: 4.4em 0 0 0;
+  padding: 0 120px;
+}
+
+.menu {
+  align-items: center;
+  height: 144px;
+  margin: 0 !important;
+  padding: 0 120px !important;
+}
+
+.menu .logo {
+  opacity: 0;
+  z-index: 9991;
+}
+
+.menu .logo #svgLogo {
+  fill: #1c1b1b;
+}
+
+.menu nav ul {
+  list-style: none;
+}
+
+.menu nav ul a {
+  color: #1c1b1b;
+  position: relative;
+  display: inline-flex;
+  margin: 0 32px 0 0;
+  font-size: 0.707em;
+}
+
+.menu nav ul a:hover {
+  text-decoration: none;
+}
+
+.menu nav ul a:last-child {
+  margin: 0;
+}
+
+.menu nav ul a li {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  opacity: 0;
+  letter-spacing: 1.4px;
+}
+
+.menu nav ul a:after {
+  content: '';
+  top: 0;
+  margin: auto auto auto 0;
+  bottom: 0;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  right: auto;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  background: rgba(51, 51, 51, 0.8);
+}
+
+.menu nav ul a:hover:after {
+  transform: scaleX(1);
+}
+
+.contactMenu nav ul a {
+  color: white;
+  opacity: 0;
+}
+
+.contactMenu nav ul a:after {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.rightPane {
+  height: 100%;
+  background: #fafafa;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.rightPane .rightImg {
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  left: -5%;
+  top: 0;
+  transform: translatex(50px);
+  display: block;
+}
+
+.rightPane span {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transform: translateX(50vw);
+  left: 0;
+  width: 100%;
+  background: #1c1b1b;
+}
+
+.portButton {
+  vertical-align: middle;
+  height: 96px;
+  width: 280px;
+  display: block;
+  position: absolute;
+  z-index: 991;
+  border: 0;
+  background: #fafafa;
+  bottom: 0;
+  transform: translatey(96px);
+  right: 0;
+  font-size: 0.707em;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.portButton:hover {
+  background: rgba(250, 250, 250, 0.8);
+  cursor: pointer;
+}
+
+.portButton svg {
+  vertical-align: middle;
+  transform: translatey(-2px);
+  margin: 0 0 0 8px;
+}
+
+.wiper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  transform: translatex(100vw);
+  background: #1c1b1b;
+  z-index: 99991;
+}
+
+.loader {
+  width: 100px;
+  height: 144px;
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 120px;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.loader span {
+  height: 4px;
+  width: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader span object {
+  display: block;
+  height: 4px;
+  width: 100px;
+  background: #252525;
+  transform: translateX(-100px);
+}
+
+.portSplash {
+  position: absolute;
+  top: 0;
+  z-index: 999991;
+  left: 0;
+  bottom: 0;
+  transform: translatey(100vh);
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+}
+
+.contactLeft {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  background: #1c1b1b;
+  transform: translatex(-70vw);
+}
+
+.contactLeft h1 {
+  color: #fff;
+  overflow: hidden;
+  transform: translatey(-100px);
+}
+
+.contactLeft h1:after {
+  background: #fff;
+}
+
+.contactLeft h2 {
+  color: #fff;
+  overflow: hidden;
+  transform: translatey(-100px);
+}
+
+.contactLeft .links {
+  min-height: 120px;
+  padding: 0 0 0 120px;
+  margin: 4.4em 0 0 0;
+  opacity: 1;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contactLeft .links ul {
+  list-style: none;
+  display: inline-flex;
+}
+
+.contactLeft .links ul a {
+  margin: 0 18px 0 0;
+  opacity: 0;
+}
+
+.contactLeft .links ul a:hover {
+  opacity: 0.4;
+}
+
+.contactLeft .links ul a:last-child {
+  margin: 0;
+}
+
+.contactLeft .links ul a li:hover {
+  opacity: 0.4;
+}
+
+.contactLeft span {
+  opacity: 0;
+  background: #fff;
+}
+
+.contactInners {
+  padding: 0;
+}

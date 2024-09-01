@@ -1,0 +1,17 @@
+//art page
+.art {
+  .stamp {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    min-width: 280px;
+    max-width: 560px;
+    height: auto;
+    margin: auto;
+
+    & > * {
+      fill: $white;
+      opacity: .9;
+    }
+  }
+}

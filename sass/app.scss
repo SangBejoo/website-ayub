@@ -1,0 +1,453 @@
+@import "comp.scss";
+// Vars ----------------- //
+$p-color: #333;
+$p-color-darker: #1c1b1b;
+$p-color-lighter: lighten($p-color, 40%);
+$pantone-purple: #A4A4B3;
+$pantone-pink: #DCC7C2;
+$accent-blue: #98b8f6;
+$white: #fff;
+$space: #fafafa;
+$noSpace: 0 !important;
+$h1: 3.998em;
+$h2: 2.827em;
+$h3: 1.999em;
+$h4: 1.414em;
+$p: 1em;
+$raleway: 'Raleway', sans-serif;
+$sans: 'Source Sans Pro', sans-serif;
+$light: 300;
+$normal: 400;
+$bold : 700;
+$extra-bold: 800;
+$black: #1c1b1b;
+.noSpace {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+ // /Vars ----------------- //
+
+ // General ----------------- //
+html {
+font-size: 1.063em;
+ box-sizing: border-box;
+height: 100%;
+	background: $space;
+overflow: hidden;
+@extend .noSpace;
+}
+
+body {
+	@extend .noSpace;
+  background-color: white;
+  font-family: 'Source Sans Pro', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: $p-color;
+
+  padding: 8px;
+
+}
+#barba-wrapper {
+
+}
+p {
+margin-bottom: 1.3em;
+
+font-family: 'Source Sans Pro', serif;
+}
+a {
+	color: $accent-blue;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2; 
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {font-size: 2.827em;}
+
+h3 {font-size: 1.999em;}
+
+h4 {font-size: 1.414em;}
+
+small, .font_small {font-size: 0.707em;}
+sup {
+    vertical-align: super;
+    font-size: 40%;
+}
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+ box-sizing: border-box;
+}
+ *, *:before, *:after {
+  box-sizing: inherit;
+   box-sizing: border-box;
+}
+ button:focus {
+outline: none;
+ }
+ // General End ----------------- //
+
+
+
+// Styles ----------------- //
+.heroBossWrapp {
+	height: 100vh;
+	width: 100vw;
+	@extend .noSpace;
+	position: relative;
+	background: $black;
+	overflow: hidden;
+}
+.leftPane {
+	position: relative;
+	height: 100%;
+	background: $space;
+	transform-origin: center center;
+	@extend .noSpace;
+	
+	& .h1 {
+		overflow: hidden;
+	}
+	& .h2 {
+		overflow: hidden;
+	}
+	& h1 {
+		overflow: hidden;
+		transform: translatey(-100px);
+	font-family: $raleway;
+	font-weight: $bold;
+	text-transform: uppercase;
+	font-size: $h2;
+		padding: 0 120px;
+	position: relative;
+		margin: 0em 0 0.5em;
+	display: inline-block;
+		&:after {
+			content: '';
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 4px;
+			background: $p-color;
+		}
+	}
+	
+	& h2 {
+transform: translatey(-100px);
+		font-family: $sans;
+	font-weight: $bold;
+		font-size: $p;
+		padding: 0 120px;
+	}
+	span {
+			opacity: 0;
+		height: 8px;
+		width: 8px;
+		background: $p-color;
+		display: block;
+	
+		 margin: 4.4em 0px 0 120px;
+	}
+	p {
+			opacity: 0;
+		margin: 4.4em 0 0 0;
+		padding: 0 120px;
+	}
+}
+.menu {
+	align-items: center;
+	height: 144px;
+	margin: 0 !important;
+	padding: 0 120px !important;
+
+	& .logo {
+		opacity: 0;
+		z-index: 9991;
+		& #svgLogo {
+			fill: $black;
+		}
+	}
+	& nav {
+		ul {
+			list-style: none;
+			
+				
+				& a {
+					color: $p-color-darker;
+		
+										position: relative;
+				display: inline-flex;
+				margin: 0 32px 0 0;
+				font-size: 0.707em;
+					&:hover {
+						text-decoration: none;
+					}
+							&:last-child {
+					margin: 0;
+				
+			}
+					& li {
+			
+				text-transform: uppercase;
+				font-family: $raleway;
+				font-weight: $bold;  
+				opacity: 0;
+				letter-spacing: 1.4px;
+		
+					}
+					
+				}
+		
+		}
+	}
+}
+
+
+.menu nav ul a:after {
+	content: '';
+	top: 0;
+	margin: auto auto auto 0;
+	bottom: 0;
+	vertical-align: middle;
+	position: absolute;
+	left: 0;
+	right: auto;
+	width: 100%;
+	height: 2px;
+	transform: scaleX(0);
+	background: rgba($p-color, 0.8);
+		@extend .easeOutExpo;
+}
+.menu nav ul a:hover:after {
+		transform: scaleX(1);
+	@extend .easeOutExpo;
+}
+
+.contactMenu {
+	& nav { 
+		
+		& ul {
+			& a {
+				color: white;
+				opacity: 0;
+				&:after {
+				background: rgba(white, 0.8);	
+				}
+				& li {
+					
+				}
+			}
+		}
+	}
+}
+
+
+.inners { 
+	
+	@extend .noSpace;
+}
+.rightPane {
+	height: 100%;
+	background: $space;
+	background-size: cover;
+	@extend .noSpace;
+	position: relative;
+	overflow: hidden;
+	& .rightImg {
+		height: 100%;
+		opacity: 0;
+		position: absolute;
+		left: -5%;
+		top: 0;
+		transform: translatex(50px);
+		display: block;
+	}
+	& span {
+		height: 100%;
+		position: absolute;
+		top: 0;
+		transform: translateX(50vw);
+		left: 0;
+		width: 100%;
+		background: $black;
+	}
+	
+
+	
+
+}
+	
+
+.portButton {
+		vertical-align: middle;
+		height: 96px;
+		width: 280px;
+		display: block;
+		position: absolute;
+		z-index: 991;
+		border: 0;
+		background: $space;
+		bottom: 0;
+		transform: translatey(96px);
+		right: 0;
+		font-size: 0.707em;
+				text-transform: uppercase;
+				font-family: $raleway;
+				font-weight: $bold;  
+				letter-spacing: 1.4px;
+			@extend .easeOutExpo;
+		
+		&:hover {
+			background: rgba($space, 0.8);
+				@extend .easeOutExpo;
+			cursor: pointer;
+		}
+		& svg {
+			vertical-align: middle;
+			transform: translatey(-2px);
+			margin: 0 0 0 8px;
+		}
+	}
+
+.wiper {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: 0;
+	transform: translatex(100vw);
+	background:$black;
+	z-index: 99991;
+}
+
+
+.loader {
+  width: 100px;
+  height: 144px;
+	z-index: 1;
+  position: absolute;
+  display: flex;
+	top: 0;
+	left:120px;
+	right: 0;
+	bottom: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
+  & span {
+  height: 4px;
+  width: 100px;
+  position: relative;
+  overflow:hidden;
+  
+  & object {
+    display: block;
+     height: 4px;
+  width: 100px;
+  background: #252525;
+    transform: translateX(-100px);
+  }
+}
+}
+
+
+
+.portSplash {
+	position: absolute;
+	top: 0;
+	z-index: 999991;
+	left: 0;
+	bottom: 0;
+	transform: translatey(100vh);
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba($space, 1);
+}
+
+.contact {
+}
+.contactLeft {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	position: absolute;
+	background: $black;
+	transform: translatex(-70vw);
+	
+	& h1 {
+		color: $white;
+		overflow: hidden;
+		transform: translatey(-100px);
+		&:after {
+			background: $white;
+		}
+	}
+	& h2 {
+		color: $white;
+		overflow: hidden;
+		transform: translatey(-100px);
+	}
+	& .links {
+		min-height: 120px;
+		padding: 0 0 0 120px;
+			margin: 4.4em 0 0 0;
+		opacity: 1;
+		color: $white;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		& ul {
+		list-style: none;
+		display: inline-flex;
+		& a {
+			margin: 0 18px 0 0;
+			opacity: 0;
+			@extend .ease;
+			&:hover {
+				opacity: 0.4;
+				@extend .ease;
+			}
+			&:last-child {
+				margin: 0;
+			}
+			& li {
+					@extend .easeOutExpo;
+			&:hover {
+				opacity: 0.4;
+				@extend .easeOutExpo;
+			}
+			}
+		}
+		
+	}
+		
+	}
+	& span {
+		opacity: 0;
+		background: $white;
+	}
+}
+
+.contactInners {
+	padding: 0;
+}
+
+
+
+
+
+// Styles End ----------------- //

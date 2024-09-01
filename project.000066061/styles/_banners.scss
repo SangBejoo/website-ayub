@@ -1,0 +1,69 @@
+.banner {
+  &--hero {}
+  
+  &--video {
+    position: relative;
+    // margin-top: 92px;
+    // height: calc(100vh - 92px);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    
+    @include breakpoint(mobile-down) {
+      max-height: 800px;
+    }
+    
+    &.art-vid {
+       background-image: url('//spacecaseartist.com/assets/vids/quasar-poster.png');
+       background-position: center;
+       background-size: cover; 
+    }
+
+    &.projects-vid {
+      background-image: url('//spacecaseartist.com/assets/vids/posters/bkgd-vid-poster.png');
+      background-position: center;
+      background-size: cover; 
+    }
+    
+    @include breakpoint(tablet-down) {
+      height: 40vh;
+      min-height: 380px;
+    }
+    
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      
+      @include breakpoint(tablet-down) {
+        display: none;
+      }
+    }
+    
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: 1;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $dark-overlay;
+    }
+  }
+}
+
+
+
+

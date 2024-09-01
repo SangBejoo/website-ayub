@@ -1,0 +1,42 @@
+////media queries (breakpoint mixins)
+@mixin breakpoint($size) {
+  @if $size == small-down {
+    @media (max-width: 30em) { @content; }
+  }
+  @else if $size == small-up {
+    @media (min-width: 30em) { @content; }
+  }
+  @else if $size == mobile-down {
+    @media (max-width: 40em) { @content; }
+  }
+  @else if $size == mobile-up {
+    @media (min-width: 40em) { @content; }
+  }
+  @else if $size == mobile {
+    @media (min-width: 40em) and (max-width: 50em) { @content; }
+  }
+  @else if $size == tablet-down {
+    @media (max-width: 50em) { @content; }
+  }
+  @else if $size == tablet-up {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $size == tablet {
+    @media (min-width: 50em) and (max-width: 75em) { @content; }
+  }
+  @else if $size == large-down {
+    @media (max-width: 75em)  { @content; }
+  }
+  @else if $size == large-up {
+    @media (min-width: 75em)  { @content; }
+  }
+  @else if $size == short {
+    @media (max-height: 30em)  { @content; }
+  }
+  @else if $size == tall {
+    @media (min-height: 30em)  { @content; }
+  }
+}
+
+//example
+//@include breakpoint(mobile-up) {}

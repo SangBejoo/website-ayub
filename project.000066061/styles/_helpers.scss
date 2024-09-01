@@ -1,0 +1,211 @@
+////helper classes
+.uppercase {
+  text-transform: uppercase;
+}
+
+.color-main { 
+  color: $blue;
+}
+
+.bold {
+  font-weight: $bold !important;
+}
+
+.semi {
+  font-weight: $semi !important;
+}
+
+.normal {
+  font-weight: $normal !important;
+}
+
+.light {
+  font-weight: $light !important;
+}
+
+//type color
+.color-blue {
+  color: $blue !important;
+}
+
+.color-white {
+   color: $white !important;
+}
+
+.color-near-white {
+   color: $near-white !important;
+}
+
+.color-charcoal {
+  color: $charcoal !important;
+}
+
+//background-color
+.background-blue {
+  background-color: $blue !important;
+}
+
+.background-charcoal {
+  background-color: $charcoal !important;
+}
+
+.background-near-white {
+  background-color: $near-white !important;
+}
+
+.background-dark-grey {
+  background-color: $dark-gray !important;
+}
+
+//margin/padding
+.margin-2em {
+  margin: 2em auto;
+}
+
+.margin-3em {
+  margin: 3em auto;
+}
+
+.margin-4em {
+  margin: 4em auto;
+}
+
+
+//svg fill colors
+.svg-white {
+  path,
+  g,
+  polygon {
+    fill: $white;
+  }
+}
+
+.svg-charcoal {
+  path,
+  g,
+  polygon {
+    fill: $charcoal;
+  }
+}
+
+.svg-blue {
+  path,
+  g,
+  polygon {
+    fill: $blue;
+  }
+}
+
+//text-alignment
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+//list styles
+.list-style-none {
+  list-style: none;
+  padding-left: 0;
+}
+
+//visibility and display
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hide {
+  display: none;
+}
+
+//media query based show/hide 
+.hide-for-small {
+  @include breakpoint(small-down) {
+    display: none;
+  }
+}
+
+.show-for-small {
+  @include breakpoint(small-up) {
+    display: none;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint(mobile-down) {
+    display: none;
+  }
+}
+
+.show-for-mobile {
+  @include breakpoint(mobile-up) {
+    display: none;
+  }
+}
+
+.show-for-mobile-only {
+  @include breakpoint(mobile-down) {
+    display: none;
+  }
+  
+  @include breakpoint(tablet-up) {
+    display: none;
+  }
+}
+
+.show-for-tablet-only {
+  @include breakpoint(tablet-down) {
+    display: none;
+  }
+  
+  @include breakpoint(large-up) {
+    display: none;
+  }
+}
+
+.show-for-large {
+  @include breakpoint(large-down) {
+    display: none;
+  }
+}
+
+.hide-for-large {
+  @include breakpoint(large-up) {
+    display: none;
+  }
+}
+
+.show-for-landscape {
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
+}
+
+.show-for-portrait {
+  @media screen and (orientation: landscape) {
+    display: none;
+  }
+}
+
+.show-for-short {
+  @include breakpoint(tall) {
+    display: none;
+  }
+}
+
+.show-for-tall {
+  @include breakpoint(short) {
+    display: none;
+  }
+}
+

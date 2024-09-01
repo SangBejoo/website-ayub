@@ -1,0 +1,162 @@
+////base type styling
+////typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $montserrat;
+  color: $charcoal;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+h1 {
+  font-weight: $bold;
+  font-size: 3em;
+  text-transform: uppercase;
+  margin: 1em auto;
+  letter-spacing: .1em;
+  
+  @include breakpoint(mobile-up) {
+    font-size: 3.2em;
+  }
+}
+
+h2 {
+  font-weight: $bold;
+  font-size: 2.4em;
+  margin: 1em auto;
+  letter-spacing: .05em;
+  
+  @include breakpoint(mobile-up) {
+    font-size: 2.6em;
+  }
+}
+
+h3 {
+  font-weight: $semi;
+  font-size: 2em;
+  margin: .75em auto;
+  letter-spacing: .05em;
+  
+  @include breakpoint(mobile-up) {
+    font-size: 2.2em;
+  }
+}
+
+h4 {
+  font-weight: $normal;
+  font-size: 1.8em;
+  margin: .75em auto;
+  
+  @include breakpoint(mobile-up) {
+    font-size: 2em;
+  }
+}
+
+h5 {
+  font-weight: $light;
+  font-size: 1.6em;
+  margin: .25em auto;
+}
+
+h6 {
+  font-weight: $semi;
+  font-size: 1.4em;
+  margin: 0 auto;
+  // text-transform: uppercase;
+}
+
+p {
+  font-weight: $normal;
+  font-size: 1rem;
+  margin: 1em auto;
+  line-height: 1.2;
+}
+
+.link {
+  color: $blue;
+  text-decoration: underline;
+}
+
+a.flex__item {
+  text-decoration: none;
+}
+
+.tagline,
+.description {
+  color: $charcoal-hover;
+}
+
+
+//buttons
+.button {
+  font-size: 1rem;
+  background-color: transparent;
+  text-align: center !important;
+  margin: 1em auto;
+  display: block;
+  padding: .5em;
+  border: 2px solid $blue;
+  color: $blue;
+  width: fit-content;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3em;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  
+  &:hover,
+  &:focus {
+    color: $blue-hover;
+    border-color: $blue-hover;
+    background-color: $off-white;
+  }
+  
+  &--primary {
+    border: 0;
+    color: $white;
+    background-color: $blue;
+    
+    
+    &:hover,
+    &:focus {
+      background-color: $blue-hover;
+      color: $near-white;
+    }
+  }
+  
+  &--secondary {
+    border: 0;
+    color: $white;
+    background-color: $charcoal;
+    
+    
+    &:hover,
+    &:focus {
+      background-color: $charcoal-hover;
+      color: $near-white;
+    }
+  }
+  
+  &--white {
+    border-color: $white;
+    color: $white;
+    
+    &:hover,
+    &:focus {
+      background-color: $blue-hover;
+      border-color: $near-white;
+      color: $near-white;
+    }
+  }
+  
+  &--charcoal {
+    border-color: $charcoal;
+    color: $charcoal;
+    
+    &:hover,
+    &:focus {
+      background-color: $dark-overlay;
+      border-color: $dark-overlay;
+      color: $eggshell;
+    }
+  }
+}

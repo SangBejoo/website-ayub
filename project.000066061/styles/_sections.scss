@@ -1,0 +1,63 @@
+////////shared sections
+//intro banners
+.intro {
+  text-align: center;
+  padding: 5em 3vw;
+  
+  & > * {
+    max-width: 50rem;
+    margin: .5em auto;
+  }
+  
+  &--home {
+    h1 { 
+      color: $blue;
+    }
+  }
+  
+  &--projects,
+  &--hire {
+    text-align: center;
+    color: $white;
+    background-color: $blue;
+    
+    & > * {
+      color: $white;
+    }
+  }
+  
+  &--art {
+    text-align: center;
+    color: $white;
+    background-color: $charcoal;
+    
+    & > * {
+      color: $white;
+    }
+  }
+}
+
+
+//message banners
+.message {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  padding: 2em 3vw;
+  
+  &--blue {
+    background-color: $blue;
+    
+    * {
+      color: $white;
+    }
+  }
+  
+  &--charcoal {
+    background-color: $charcoal;
+    
+    * {
+      color: $white;
+    }
+  }
+}

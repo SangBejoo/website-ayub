@@ -1,0 +1,122 @@
+//animations (keyframes) & mixins
+.running {
+  animation-play-state: running !important;
+}
+
+.animated {
+  animation-fill-mode: both;
+}
+
+//bounce
+.dslc-in-viewport-anim-bounce_special.dslc-in-viewport {
+  animation-timing-function: ease !important;
+  opacity: 0;
+  transform-origin: 50% 100%;
+}
+
+@keyframes bounce_special {
+  0% {
+    opacity: 0;
+    transform: translateY(0%) scaleY(0.6);
+  }
+  60% {
+    transform: translateY(-100%) scaleY(1.1);
+  }
+  70% {
+    transform: translateY(0%) scaleY(0.95) scaleX(1.05);
+  }
+  80% {
+    transform: translateY(0%) scaleY(1.05) scaleX(1);
+  }
+  90% {
+    transform: translateY(0%) scaleY(0.95) scaleX(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) scaleY(1) scaleX(1);
+  }
+}
+
+//pulse
+.et-in-viewport-pulse_special {
+  animation-iteration-count: infinite !important;
+}
+
+@keyframes pulse_special {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  50% {
+    ransform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+}
+
+/////main logo on B&A
+//floating
+.et-in-viewport-floating_special {
+  animation-iteration-count: infinite !important;
+  opacity: 1 !important;
+}
+
+@keyframes floating_special {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+////animation-svg-icon.css
+//ANIMATION SVG ICON
+svg.line-svg {
+  margin-top: -30px;
+}
+
+svg.line-svg line {
+  stroke-dasharray: 0 50;
+}
+
+svg.line-svg.start-paint line {
+  stroke-dasharray: 50 0;
+  animation-fill-mode: forwards;
+  animation: left-paint-line-svg 5s cubic-bezier(0, 0.5, 0.17, 1) 1;
+}
+
+@keyframes left-paint-line-svg {
+  from {
+    stroke-dasharray: 0 50;
+  }
+  to {
+    stroke-dasharray: 50 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dasharray: 0 19;
+  }
+  to {
+    stroke-dasharray: 19 0;
+  }
+}
+
+@keyframes dash-polyline {
+  from {
+    stroke-dasharray: 0 52;
+  }
+  to {
+    stroke-dasharray: 52 0;
+  }
+}

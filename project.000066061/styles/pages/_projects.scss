@@ -1,0 +1,128 @@
+//projects page
+.projects { 
+  .stamp {
+    position: relative;
+    z-index: 2;
+    width: 30%;
+    min-width: 120px;
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+
+    & > * {
+      fill: $white;
+      opacity: .9;
+    }
+  }
+}
+
+.case {
+  margin: 3em 0 0 0;
+  
+  &--study {
+    margin: 5em 0;
+    padding: 5em 5vw;
+    text-align: center;
+    
+    &:nth-of-type(even) {
+      background-color: $near-white;
+    }
+    
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  
+  &--icon {
+    display: block;
+    text-align: left;
+    
+    @include breakpoint(tablet-up) {
+      display: inline-block;
+      vertical-align: top;
+    }
+    
+    img {
+      width: 140px;
+      margin: 0 100px 30px 0;
+    }
+  }
+  
+  &--content {
+    width: 100%;
+    text-align: left;
+    
+    @include breakpoint(tablet-up) {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(100% - 250px);
+      max-width: calc(75rem);
+    }
+    
+    h3 {
+      text-align: left;
+      margin: 0 auto;
+    }
+    
+    p {
+      font-size: 1.8em;
+      text-align: left;
+    }
+    
+    .button {
+      margin: 1em auto;
+      
+      @include breakpoint(tablet-up) {
+        display: inline-block; 
+        margin: 2em 2em 2em 0;
+      }
+    }
+  }
+  
+  &--images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+      
+    img {
+      align-self: center;
+    }
+
+
+    &.one-column {
+      img {
+        width: 100%;
+        margin-bottom: 1vh;
+      }
+    }
+    
+    &.two-column {
+      img {
+        width: 48%;
+        margin-bottom: 2vh;
+        
+        @include breakpoint(tablet-down) {
+          width: 100%;
+        }
+      }
+    }
+    
+    &.three-column {
+      img {
+        width: 30%;
+        margin-bottom: 1vh;
+        
+        @include breakpoint(tablet-down) {
+          width: 100%;
+          margin-bottom: 2vh;
+        }
+      }
+    }
+    
+    & + h3 {
+      margin-top: 5vh;
+    }
+  }
+}

@@ -1,0 +1,190 @@
+//og google image preview expander
+.og {
+  max-width: 80rem;
+  margin: 0 auto;
+
+}
+
+.og-grid {
+	list-style: none;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+
+  li {
+    display: inline-block;
+    margin: 1em;
+    vertical-align: top;
+    height: 400px;
+    width: 400px;
+    
+    @include breakpoint(mobile-down) {
+      width: calc(100% - 2em);
+      height: auto !important;
+    }
+  
+    &:nth-of-type(n+15) {
+      @include breakpoint(large-down) {
+        display: none;
+      }
+    }
+
+    & > a,
+    a img {
+      border: none;
+      outline: none;
+      display: block;
+      position: relative;
+    }
+
+    &.og-expanded > a::after {
+      top: auto;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-bottom-color: #ddd;
+      border-width: 15px;
+      left: 50%;
+      margin: -20px 0 0 -15px;
+    }
+  }
+
+  .og-expander {
+    position: absolute;
+    background: #ddd;
+    top: auto;
+    left: 0;
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .og-expander-inner {
+    padding: 50px 30px;
+    height: 100%;
+    
+    @include breakpoint(mobile-down) {
+      padding: 3em;
+    }
+  }
+
+  .og-close {
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    z-index: 9;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      height: 1px;
+      background: #888;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background: #333;
+    }
+  }
+
+  .og-fullimg,
+  .og-details {
+    width: 50%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    
+    & > * {
+      text-align: left;
+    }
+  }
+
+  .og-fullimg {
+    text-align: center;
+    
+    @include breakpoint(mobile-down) {
+      display: none; 
+    }
+
+    img {
+      display: inline-block;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .og-details {
+    padding: 0 40px 0 20px;
+    
+    @include breakpoint(mobile-down) {
+	    float: none; 
+      width: 100%;
+      padding: 0;
+    }
+    
+    & > * {
+      max-width: 40rem;
+    }
+
+    h3 {
+      font-weight: $light;
+      font-size: 3em;
+      padding: 0 0 10px;
+      margin: 0;
+      
+      @include breakpoint(mobile-down) {
+        padding: 0;
+        font-size: 2em;
+        font-weight: $semi;
+        margin-bottom: .5em;
+      }
+    }
+
+     p {
+      font-weight: $normal;
+      font-size: 1.6em;
+      color: $dark-gray;
+      margin: 0;
+      margin-bottom: 1em;
+       
+      @include breakpoint(mobile-down) {
+        padding: 0;
+        font-size: 1.2em;
+      }
+    }
+
+    a {
+      display: inline-block;
+      outline: none;
+    }
+  }
+
+  .og-loading {
+    width: 250px;
+    height: 250px;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/138941/throbber.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    left: calc(50% - 125px);
+    top: calc(50% - 125px);
+  }
+}

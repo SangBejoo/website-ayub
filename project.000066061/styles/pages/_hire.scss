@@ -1,0 +1,16 @@
+//contact page
+.hire {
+  background-color: $eggshell;
+  
+  footer {
+    @include breakpoint(tablet-up) {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+#hire {
+  padding-top: 90px;
+}
